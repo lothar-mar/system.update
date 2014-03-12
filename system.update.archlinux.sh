@@ -61,8 +61,8 @@ case $input_1 in
 	10) sudo pacman -Qdt|less;;
 	21) echo "Unimplemented.";;
 	30) sudo pacman -Scc;;
-	60) ssh -p 54329 telheiras.dyndns.info;;
-	70) ssh -p 54330 telheiras.dyndns.info;;
+	60) echo "Unimplemented.";;
+	70) echo "Unimplemented.";;
 	80) echo "Unimplemented.";;
 	99) exit ;;
 	*) wrong insert;;
