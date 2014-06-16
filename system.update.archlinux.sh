@@ -34,6 +34,8 @@ do
 		10) List all packages no longer required as dependencies (orphans) 
 		21) Remove a package and all its orphan dependencies (sudo pacman -Rs package)
 		30) Clear pacman cache
+		41) Sanity check on /etc/passwd
+		42) Sanity check on /etc/group
 	
 	Pippin (seedbox)
 		60) ssh this box
@@ -61,8 +63,10 @@ case $input_1 in
 	10) sudo pacman -Qdt|less;;
 	21) echo "Unimplemented.";;
 	30) sudo pacman -Scc;;
-	60) echo "Unimplemented.";;
-	70) echo "Unimplemented.";;
+	41) sudo pwck;;
+	42) sudo grpck;;
+	60) ssh -p 54329 telheiras.dyndns.info;;
+	70) ssh -p 54330 telheiras.dyndns.info;;
 	80) echo "Unimplemented.";;
 	99) exit ;;
 	*) wrong insert;;
