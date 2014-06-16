@@ -36,16 +36,21 @@ do
 		30) Clear pacman cache
 		41) Sanity check on /etc/passwd
 		42) Sanity check on /etc/group
-	
-	Pippin (seedbox)
-		60) ssh this box
 
-	Merriadoc (IRC and IM)
-		70) ssh this box
+	Birmingham.twilightparadox.com
+		50) ssh local machine
+	Telheiras.twilightparadox.com
+		60) ssh Pippin (seedbox)
+		61) ssh Merriadoc (IRC and IM)
+		62) ssh Frodo (laptop)
+		63) ssh WD network storage (network storage)
+		64) ssh Bilbo (htpc)
+		65) ssh Samwise (netbook)
+	Palmela.twilightparadox.com
+		70) ssh ze's pc
+	Sisaqua.twilightparadox.com
+		80) ssh rosie (desktop)
 
-	Samwise (netbook)
-		80) ssh this box
-		
 		99) exit
 EOF
 
@@ -65,9 +70,15 @@ case $input_1 in
 	30) sudo pacman -Scc;;
 	41) sudo pwck;;
 	42) sudo grpck;;
-	60) ssh -p 54329 telheiras.dyndns.info;;
-	70) ssh -p 54330 telheiras.dyndns.info;;
-	80) echo "Unimplemented.";;
+	50) ssh -p 22 birmingham.twilightparadox.com;;
+	60) ssh -p 54329 telheiras.twilightparadox.com;;
+	61) ssh -p 54330 telheiras.twilightparadox.com;;
+	62) ssh -p 54332 telheiras.twilightparadox.com;;
+	63) ssh -p 54331 telheiras.twilightparadox.com;;
+	64) ssh -p 22 telheiras.twilightparadox.com;;
+	65) ssh -p 54333 telheiras.twilightparadox.com;;
+	70) ssh -p 22 palmela.twilightparadox.com;;
+	80) ssh -p 54335 sisaqua.twilightparadox.com;;
 	99) exit ;;
 	*) wrong insert;;
 esac
